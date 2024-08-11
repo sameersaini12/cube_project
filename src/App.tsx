@@ -21,17 +21,19 @@ const App : React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const fetchCustomers = (start: number, limit: number): Promise<Customer[]> => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const newCustomers = Array.from({ length: limit }, (_, index) => ({
-          id: start + index+1,
-          name: `Customer ${start + index + 1}`,
-          title: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-          address : `House No. ${start+index + 1} , Village abc, Kurukshetra, Haryana, India`
-        }));
-        resolve(newCustomers);
-      }, 1000);
-    });
+      return new Promise((resolve) => {
+        if(start<=1000) {
+          setTimeout(() => {
+            const newCustomers = Array.from({ length: limit }, (_, index) => ({
+              id: start + index+1,
+              name: `Customer ${start + index + 1}`,
+              title: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+              address : `House No. ${start+index + 1} , Village abc, Kurukshetra, Haryana, India`
+            }));
+            resolve(newCustomers);
+          }, 1000);
+        }
+      });
   };
 
   const loadMoreCustomers = useCallback(async () => {
