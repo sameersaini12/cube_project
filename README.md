@@ -1,3 +1,5 @@
+# Deployed web link on netlify
+https://cubeprojectsameer.netlify.app/
 
 Till the user List and Images are loading
 ![loading](https://github.com/user-attachments/assets/decc191f-3bf9-4ae8-97e1-63c9b123a9e5)
