@@ -1,3 +1,14 @@
+
+Till the user List and Images are loading
+![loading](https://github.com/user-attachments/assets/decc191f-3bf9-4ae8-97e1-63c9b123a9e5)
+
+Main Screen
+![mainScree](https://github.com/user-attachments/assets/97158235-5730-4681-9984-e50f0a21acfd)
+
+Fetch user list of 10 items at a batch so that there is pressure on rendering after 10 lenghth of list another 10 added to the previous List
+![userListLoading](https://github.com/user-attachments/assets/0bf8c3b8-bb79-4607-b443-804f872eb1e8)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
